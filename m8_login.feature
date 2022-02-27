@@ -14,25 +14,12 @@
             Então dev exibir uma mensagem de boas vindas "Olá Níccolas"
 
 
-            Cenário: Usuário Inexistente
-            Quando eu digitar o usuário "joao.ninguem@email.com"
-            E a senha "123@abc"
-            Então dev exibir uma mensagem de erro "Usuário inexistente"
-
-
-            Cenário: Usuário com Senha Inválida
-            Quando eu digitar o usuário "niccolas.cassel@gmail.com"
-            E a senha "123456"
-            Então dev exibir uma mensagem de erro "Usuário ou senha inválidos"
-
-
-            Esquema do Cenário: Autenticar Múltiplos Usuários
+            Esquema do Cenário: Autenticações Inválidas
             Quando eu digitar o <usuario>
             E a <senha>
             Então deve exibir a <mensagem> de sucesso
 
             Exemplos:
-            | usuario                       | senha         | mensagem                      |
-            | "niccolas.cassel@gmail.com"   | "GreM!0@2017" | "Olá Níccolas"                |
+            | usuario                       | senha         | mensagem                      |          
             | "joao.ninguem@email.com"      | "123@abc"     | "Usuário inexistente"         |
             | "niccolas.cassel@gmail.com"   | "123456"      | "Usuário ou senha inválidos"  |
